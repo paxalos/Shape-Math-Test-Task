@@ -4,8 +4,6 @@ using UnityEngine;
                    typeof(EdgeCollider2D))]
 public class ScreenEdgeColliderAdder : MonoBehaviour
 {
-    [SerializeField] private Transform floor;
-
     private Camera mainCamera;
     private EdgeCollider2D edgeCollider;
 
@@ -30,10 +28,11 @@ public class ScreenEdgeColliderAdder : MonoBehaviour
         }
 
         float nearClipPlane = mainCamera.nearClipPlane;
-        float floorPositionY = floor.localPosition.y;
+        float floorPositionY = mainCamera.pixelHeight / 5f;
         float pixelHeight = mainCamera.pixelHeight * 2;
         float pixelWidth = mainCamera.pixelWidth;
         
+
         var bottomLeft = (Vector2)mainCamera.ScreenToWorldPoint(new Vector3(0,
                                                                             floorPositionY,
                                                                             nearClipPlane));

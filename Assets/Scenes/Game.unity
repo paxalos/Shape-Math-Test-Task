@@ -313,7 +313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee376cf384bc5ce428a1c783c4edcab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 1329027808}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,37 +397,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1329027804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1329027808}
-  m_Layer: 0
-  m_Name: Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1329027808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329027804}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0122, y: -2.8321, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356820223
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +469,6 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   minSpawnCount: 27
   maxSpawnCount: 54
-  maxHeightSpawnDistance: 5
   shapePrefab: {fileID: 8999979665169946868, guid: 6f80af8e487d0e247b36154a7291d64e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -509,5 +476,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1329027808}
   - {fileID: 1356820224}
