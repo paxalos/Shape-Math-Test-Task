@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4788008225292432956}
   - component: {fileID: 1208738155474290150}
   - component: {fileID: 8999979665169946868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,10 +230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34d702db6716e142bd3b46af1459a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shape: {fileID: 4663292589438491439}
-  border: {fileID: 5353157840357051950}
-  animal: {fileID: 8505999394091052264}
-  shapeCollider: {fileID: 4788008225292432956}
+  shapeRenderer: {fileID: 4663292589438491439}
+  borderRenderer: {fileID: 5353157840357051950}
+  animalRenderer: {fileID: 8505999394091052264}
+  shapeItemCollider: {fileID: 4788008225292432956}
 --- !u!1 &7944926462930080420
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508672818340311177}
   - component: {fileID: 5353157840357051950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5601082683623037345}
   - component: {fileID: 8505999394091052264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

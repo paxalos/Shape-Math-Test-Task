@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8966e2e847bd29846a368fa889930d5d, type: 3}
+  m_Name: ShapeStore
+  m_EditorClassIdentifier: 
+  shapeRecords:
+  - shape: 0
+    shapeSprite: {fileID: -2135684255, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: 873143231, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 1
+    shapeSprite: {fileID: -242253494, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: -1670489171, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 2
+    shapeSprite: {fileID: 33866550, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: -1951357283, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 3
+    shapeSprite: {fileID: 1438091124, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: 804219870, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 4
+    shapeSprite: {fileID: 1079145073, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: -2056103001, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 5
+    shapeSprite: {fileID: -1206986364, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: 1107749293, guid: ee1a9acec411e4840887f87a98568a66, type: 3}
+  - shape: 6
+    shapeSprite: {fileID: 1785728811, guid: 94b99ac8854a3354882983d0c09fd1c2, type: 3}
+    borderShapeSprite: {fileID: -1971720822, guid: ee1a9acec411e4840887f87a98568a66, type: 3}

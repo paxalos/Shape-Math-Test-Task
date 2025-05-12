@@ -1,0 +1,20 @@
+:root {
+}
+
+.restart-button {
+    bottom: 100px;
+    transform-origin: bottom;
+    background-color: rgba(188, 188, 188, 0);
+    background-image: url("project://database/Assets/Sprites/Game/Restart3.png?fileID=21300000&guid=ef4d8b8424bf7454497842c28cc53246&type=3#Restart3");
+    -unity-background-scale-mode: scale-to-fit;
+    height: 300px;
+    width: 300px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.restart-button:active {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+}
