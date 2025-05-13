@@ -1,0 +1,12 @@
+:root {
+}
+
+.PlayAgainButton {
+    font-size: 100px;
+    bottom: 71px;
+    background-color: rgb(188, 188, 188);
+}
+
+.PlayAgainButton:active {
+    background-color: rgba(188, 188, 188, 0.78);
+}

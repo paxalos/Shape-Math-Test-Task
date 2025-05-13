@@ -25,6 +25,7 @@ namespace GameLogic
         [SerializeField] private Camera mainCamera;
         [SerializeField] private ShapeItemController shapeItemPrefab;
         [SerializeField] private GameUIController gameUIController;
+        [SerializeField] private MessageUIController messageUIController;
         [SerializeField] private int minSpawnCount;
         [SerializeField] private int maxSpawnCount;
         [SerializeField] private int matchElementsCount;
@@ -50,14 +51,27 @@ namespace GameLogic
 
             SubscribeOnUIEvents();
 
-            shapeSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
+            SetShapeSpawnCount();
 
             SpawnShapes();
+        }
+
+        private void SetShapeSpawnCount()
+        {
+            shapeSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
         }
 
         private void SubscribeOnUIEvents()
         {
             gameUIController.RestartButtonClicked += GameUIController_RestartButtonClicked;
+            messageUIController.PlayAgainButtonClicked += MessageUIController_PlayAgainButtonClicked;
+        }
+
+        private void MessageUIController_PlayAgainButtonClicked()
+        {
+            messageUIController.gameObject.SetActive(false);
+            SetShapeSpawnCount();
+            RespawnShapes();
         }
 
         private void GameUIController_RestartButtonClicked()
@@ -139,6 +153,9 @@ namespace GameLogic
 
             gameUIController.ClearElementModels(new Range(0, MAX_ELEMENTS_TO_SELECT_COUNT));
 
+            for (int i = 0; i < selectedElementRecords.Length; i++)
+                selectedElementRecords[i] = null;
+
             currentSelectionCellIndex = 0;
 
             SpawnShapes();
@@ -185,13 +202,18 @@ namespace GameLogic
                 }
             }
 
-            if (shapeItems.Count == 0)
+            if (shapeItems.Count == 0 &&
+                currentSelectionCellIndex == 0)
             {
-                Debug.Log("You won");
+                messageUIController.gameObject.SetActive(true);
+                messageUIController.SetMessage("You won!");
             }
-            else if (currentSelectionCellIndex == MAX_ELEMENTS_TO_SELECT_COUNT)
+            else if (currentSelectionCellIndex == MAX_ELEMENTS_TO_SELECT_COUNT ||
+                     shapeItems.Count == 0 &&
+                     currentSelectionCellIndex != 0)
             {
-                Debug.Log("You lose");
+                messageUIController.gameObject.SetActive(true);
+                messageUIController.SetMessage("You lost!");
             }
         }
 
